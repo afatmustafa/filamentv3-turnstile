@@ -86,9 +86,6 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
                 ], 'filamentv3-turnstile-stubs');
             }
         }
-
-        // Testing
-        TestableLivewire::mixin(new TestsFilamentTurnstile());
     }
 
     protected function getAssetPackageName(): ?string
