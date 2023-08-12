@@ -8,6 +8,7 @@ use Filament\Forms\Components\Field;
 class Turnstile extends Field
 {
     protected string $view = 'filamentv3-turnstile::components.turnstile';
+
     protected string $theme = 'auto';
 
     protected string $size = 'normal';
