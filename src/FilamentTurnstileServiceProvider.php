@@ -99,8 +99,8 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filamentv3-turnstile', __DIR__ . '/../resources/dist/components/filamentv3-turnstile.js'),
-            Css::make('filamentv3-turnstile-styles', __DIR__ . '/../resources/dist/filamentv3-turnstile.css'),
-            Js::make('filamentv3-turnstile-scripts', __DIR__ . '/../resources/dist/filamentv3-turnstile.js'),
+            // Css::make('filamentv3-turnstile-styles', __DIR__ . '/../resources/dist/filamentv3-turnstile.css'),
+            // Js::make('filamentv3-turnstile-scripts', __DIR__ . '/../resources/dist/filamentv3-turnstile.js'),
         ];
     }
 
