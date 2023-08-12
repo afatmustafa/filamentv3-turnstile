@@ -2,6 +2,8 @@
 
 namespace Afatmustafa\FilamentTurnstile;
 
+use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
+use Afatmustafa\FilamentTurnstile\Testing\TestsFilamentTurnstile;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -14,8 +16,6 @@ use Livewire\Testing\TestableLivewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
-use Afatmustafa\FilamentTurnstile\Testing\TestsFilamentTurnstile;
 
 class FilamentTurnstileServiceProvider extends PackageServiceProvider
 {
