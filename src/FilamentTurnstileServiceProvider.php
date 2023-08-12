@@ -62,15 +62,6 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
             $this->getAssetPackageName()
         );
         Livewire::component('turnstile', Turnstile::class);
-
-        // Handle Stubs
-        if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
-                $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filamentv3-turnstile/{$file->getFilename()}"),
-                ], 'filamentv3-turnstile-stubs');
-            }
-        }
     }
 
     protected function getAssetPackageName(): ?string
