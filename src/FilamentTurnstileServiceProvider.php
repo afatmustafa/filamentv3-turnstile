@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Afatmustafa\FilamentTurnstile;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -14,14 +14,14 @@ use Livewire\Testing\TestableLivewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
-use VendorName\Skeleton\Testing\TestsSkeleton;
+use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
+use Afatmustafa\FilamentTurnstile\Testing\TestsFilamentTurnstile;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FilamentTurnstileServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'filamentv3-turnstile';
 
-    public static string $viewNamespace = 'skeleton';
+    public static string $viewNamespace = 'filamentv3-turnstile';
 
     public function configurePackage(Package $package): void
     {
@@ -37,7 +37,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub(':vendor_slug/:package_slug');
+                    ->askToStarRepoOnGitHub('afatmustafa/filamentv3-turnstile');
             });
 
         $configFileName = $package->shortName();
@@ -83,18 +83,18 @@ class SkeletonServiceProvider extends PackageServiceProvider
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/skeleton/{$file->getFilename()}"),
-                ], 'skeleton-stubs');
+                    $file->getRealPath() => base_path("stubs/filamentv3-turnstile/{$file->getFilename()}"),
+                ], 'filamentv3-turnstile-stubs');
             }
         }
 
         // Testing
-        TestableLivewire::mixin(new TestsSkeleton());
+        TestableLivewire::mixin(new TestsFilamentTurnstile());
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return ':vendor_slug/:package_slug';
+        return 'afatmustafa/filamentv3-turnstile';
     }
 
     /**
@@ -103,9 +103,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('skeleton', __DIR__ . '/../resources/dist/components/skeleton.js'),
-            Css::make('skeleton-styles', __DIR__ . '/../resources/dist/skeleton.css'),
-            Js::make('skeleton-scripts', __DIR__ . '/../resources/dist/skeleton.js'),
+            // AlpineComponent::make('filamentv3-turnstile', __DIR__ . '/../resources/dist/components/filamentv3-turnstile.js'),
+            Css::make('filamentv3-turnstile-styles', __DIR__ . '/../resources/dist/filamentv3-turnstile.css'),
+            Js::make('filamentv3-turnstile-scripts', __DIR__ . '/../resources/dist/filamentv3-turnstile.js'),
         ];
     }
 
@@ -115,7 +115,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            SkeletonCommand::class,
+            FilamentTurnstileCommand::class,
         ];
     }
 
@@ -149,7 +149,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_skeleton_table',
+            'create_filamentv3-turnstile_table',
         ];
     }
 }

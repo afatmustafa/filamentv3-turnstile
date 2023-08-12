@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton\Testing;
+namespace Afatmustafa\FilamentTurnstile\Testing;
 
 use Livewire\Testing\TestableLivewire;
 
 /**
  * @mixin TestableLivewire
  */
-class TestsSkeleton
+class TestsFilamentTurnstile
 {
     //
 }

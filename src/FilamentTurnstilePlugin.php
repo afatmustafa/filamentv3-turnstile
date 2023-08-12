@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Afatmustafa\FilamentTurnstile;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class FilamentTurnstilePlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filamentv3-turnstile';
     }
 
     public function register(Panel $panel): void
