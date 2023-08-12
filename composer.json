@@ -36,8 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Afatmustafa\\FilamentTurnstile\\": "src/",
-            "Afatmustafa\\FilamentTurnstile\\Database\\Factories\\": "database/factories/"
+            "Afatmustafa\\FilamentTurnstile\\": "src/"
         }
     },
     "autoload-dev": {

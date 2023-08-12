@@ -3,6 +3,7 @@
 namespace Afatmustafa\FilamentTurnstile;
 
 use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
+use Afatmustafa\FilamentTurnstile\Forms\Components\Turnstile;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -11,6 +12,7 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Filament\Support\Icons\Icon;
 use Illuminate\Filesystem\Filesystem;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -63,19 +65,11 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        // Asset Registration
-        FilamentAsset::register(
-            $this->getAssets(),
-            $this->getAssetPackageName()
-        );
-
         FilamentAsset::registerScriptData(
             $this->getScriptData(),
             $this->getAssetPackageName()
         );
-
-        // Icon Registration
-        FilamentIcon::register($this->getIcons());
+        Livewire::component('turnstile', Turnstile::class);
 
         // Handle Stubs
         if (app()->runningInConsole()) {
@@ -93,36 +87,6 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
     }
 
     /**
-     * @return array<Asset>
-     */
-    protected function getAssets(): array
-    {
-        return [
-            // AlpineComponent::make('filamentv3-turnstile', __DIR__ . '/../resources/dist/components/filamentv3-turnstile.js'),
-            // Css::make('filamentv3-turnstile-styles', __DIR__ . '/../resources/dist/filamentv3-turnstile.css'),
-            // Js::make('filamentv3-turnstile-scripts', __DIR__ . '/../resources/dist/filamentv3-turnstile.js'),
-        ];
-    }
-
-    /**
-     * @return array<class-string>
-     */
-    protected function getCommands(): array
-    {
-        return [
-            FilamentTurnstileCommand::class,
-        ];
-    }
-
-    /**
-     * @return array<string, Icon>
-     */
-    protected function getIcons(): array
-    {
-        return [];
-    }
-
-    /**
      * @return array<string>
      */
     protected function getRoutes(): array
@@ -136,15 +100,5 @@ class FilamentTurnstileServiceProvider extends PackageServiceProvider
     protected function getScriptData(): array
     {
         return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getMigrations(): array
-    {
-        return [
-            'create_filamentv3-turnstile_table',
-        ];
     }
 }
