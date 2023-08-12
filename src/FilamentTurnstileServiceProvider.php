@@ -3,7 +3,6 @@
 namespace Afatmustafa\FilamentTurnstile;
 
 use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
-use Afatmustafa\FilamentTurnstile\Testing\TestsFilamentTurnstile;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
