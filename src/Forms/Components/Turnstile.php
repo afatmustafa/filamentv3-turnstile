@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forms\Components;
+namespace Afatmustafa\FilamentTurnstile\Forms\Components;
 
 use Coderflex\LaravelTurnstile\Rules\TurnstileCheck;
 use Filament\Forms\Components\Field;
