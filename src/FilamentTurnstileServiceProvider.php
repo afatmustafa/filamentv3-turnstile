@@ -2,15 +2,8 @@
 
 namespace Afatmustafa\FilamentTurnstile;
 
-use Afatmustafa\FilamentTurnstile\Commands\FilamentTurnstileCommand;
 use Afatmustafa\FilamentTurnstile\Forms\Components\Turnstile;
-use Filament\Support\Assets\AlpineComponent;
-use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
-use Filament\Support\Facades\FilamentIcon;
-use Filament\Support\Icons\Icon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
