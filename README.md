@@ -6,7 +6,7 @@ A plugin to help you implement the Cloudflare Turnstile into your Filament panel
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/afatmustafa/filamentv3-turnstile/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/afatmustafa/filamentv3-turnstile/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/afatmustafa/filamentv3-turnstile.svg?style=flat-square)](https://packagist.org/packages/afatmustafa/filamentv3-turnstile)
 
-![Filament V3 Cloudflare Turnstile Integration](./art/afatmustafa-filamentv3-turnstile.jpg)
+![Filament V3 Cloudflare Turnstile Integration](https://raw.githubusercontent.com/afatmustafa/filamentv3-turnstile/3.x/art/afatmustafa-filamentv3-turnstile.jpg)
 
 This extension leverages [Laravel Turnstile](https://github.com/coderflexx/laravel-turnstile) under the hood. For more details, please refer to the __README__ on the project page.<br/>
 Kudos to [coderflexx](https://github.com/coderflexx) for his remarkable work.
@@ -97,7 +97,7 @@ class AdminPanelProvider extends PanelProvider
 }
 ```
 </br>3. That's it! You should now see the Turnstile captcha on the login page.
-![Login Page Demo](./art/login-page-demo.jpg)
+![Login Page Demo](https://raw.githubusercontent.com/afatmustafa/filamentv3-turnstile/3.x/art/login-page-demo.jpg)
 
 ## Testing
 
