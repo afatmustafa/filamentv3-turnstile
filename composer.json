@@ -4,7 +4,11 @@
     "keywords": [
         "afatmustafa",
         "laravel",
-        "filamentv3-turnstile"
+        "filamentv3-turnstile",
+        "filament",
+        "filament-plugin",
+        "cloudflare",
+        "turnstile"
     ],
     "homepage": "https://github.com/afatmustafa/filamentv3-turnstile",
     "support": {
