@@ -8,12 +8,9 @@ use Filament\Forms\Components\Field;
 class Turnstile extends Field
 {
     protected string $view = 'filamentv3-turnstile::components.turnstile';
-
-    protected string $theme = 'auto';
-
-    protected string $size = 'normal';
-
     protected string $language = 'en-US';
+    protected string $theme = 'auto';
+    protected string $size = 'normal';
 
     protected function setUp(): void
     {
@@ -24,6 +21,13 @@ class Turnstile extends Field
         $this->rules(['required', new TurnstileCheck()]);
 
         $this->dehydrated(false);
+    }
+
+    public function language(string $language): static
+    {
+        $this->language = $language;
+
+        return $this;
     }
 
     public function theme(string $theme): static
@@ -40,11 +44,9 @@ class Turnstile extends Field
         return $this;
     }
 
-    public function language(string $language): static
+    public function getLanguage(): string
     {
-        $this->language = $language;
-
-        return $this;
+        return $this->evaluate($this->language);
     }
 
     public function getTheme(): string
@@ -57,8 +59,5 @@ class Turnstile extends Field
         return $this->evaluate($this->size);
     }
 
-    public function getLanguage(): string
-    {
-        return $this->evaluate($this->language);
-    }
+
 }
